@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Senryaku Kigyo Uploader</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; margin: 2.5rem auto; max-width: 44rem; padding: 0 1.25rem; line-height: 1.65; color: #1a1a1a; }
+  h1 { font-size: 1.7rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  .sub { color: #555; margin-top: 0; }
+  a { color: #0b57d0; }
+  footer { margin-top: 3rem; color: #555; font-size: 0.9rem; border-top: 1px solid #ddd; padding-top: 1rem; }
+</style>
+</head>
+<body>
+
+<h1>Senryaku Kigyo Uploader</h1>
+<p class="sub">A personal, single-user automation tool for publishing videos to one YouTube channel.</p>
+
+<h2>What this application is</h2>
+<p>
+Senryaku Kigyo Uploader is a private automation tool developed and operated by the owner of the
+YouTube channel <strong>戦略で読む企業史</strong> (@senryaku-kigyo). The channel publishes long-form
+commentary videos about corporate history. The tool uploads the owner's own finished video files
+to his own channel so that routine publishing steps do not have to be repeated by hand in
+YouTube Studio.
+</p>
+<p>
+The application is used by exactly one person: the developer himself, on his own computer, with
+his own Google account. It is not distributed to anyone, it has no sign-up, and no other user can
+authorize it or use it.
+</p>
+
+<h2>How the YouTube upload scope is used</h2>
+<p>
+The application requests a single OAuth scope,
+<code>https://www.googleapis.com/auth/youtube.upload</code>, and uses it only to:
+</p>
+<ul>
+  <li>upload video files to the owner's own YouTube channel (YouTube Data API <code>videos.insert</code>),</li>
+  <li>set the title, description, and scheduled publication time of those uploaded videos, and</li>
+  <li>set the custom thumbnail of those uploaded videos (<code>thumbnails.set</code>).</li>
+</ul>
+<p>
+The application does not read, modify, or delete any other content, and it does not access data
+belonging to any person other than the operator himself. No other Google API scopes are requested.
+</p>
+
+<h2>Privacy</h2>
+<p>
+How the application handles Google user data is described in the
+<a href="privacy.html">Privacy Policy</a>.
+</p>
+
+<h2>Contact</h2>
+<p>
+Operator: the owner of the YouTube channel 戦略で読む企業史 (@senryaku-kigyo)<br>
+Email: <a href="mailto:mitunyansoncho@gmail.com">mitunyansoncho@gmail.com</a>
+</p>
+
+<footer>
+Senryaku Kigyo Uploader — a personal publishing tool. This page is the application's home page
+for OAuth verification purposes.
+</footer>
+
+</body>
+</html>
